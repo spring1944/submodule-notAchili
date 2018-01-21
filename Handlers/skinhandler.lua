@@ -142,13 +142,19 @@ end
 function SkinHandler.LoadSkin(control)
   local skin = GetSkin(control.skinName)
   if (skin) then
+  	if (skin[control.styleKey]) then
+      table.merge(control,skin[control.styleKey]) -- per-style-class defaults
+    end 
     if (skin[control.classname]) then
       table.merge(control,skin[control.classname]) -- per-class defaults
-    end 
+    end
     table.merge(control,skin.general)
   end
 
   skin = SkinHandler.defaultSkin
+  if (skin[control.styleKey]) then
+    table.merge(control,skin[control.styleKey]) -- per-style-class defaults
+  end 
   if (skin[control.classname]) then
     table.merge(control,skin[control.classname]) -- per-class defaults
   end

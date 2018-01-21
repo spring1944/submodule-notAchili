@@ -2,8 +2,8 @@
 
 Button = Control:Inherit{
   classname= "button",
-  caption  = 'button',
-  defaultWidth  = 70,
+  caption = 'button',
+  defaultWidth = 70,
   defaultHeight = 20,
   
   normalColor	= { 1.0, 1.0, 1.0, 1.0 },
