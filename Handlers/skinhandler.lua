@@ -6,7 +6,7 @@ SkinHandler = {}
 --//=============================================================================
 --// Some important folders
 
-local skinFolder = CHILI_DIRNAME .. "Skins/"
+local skinFolder = NOTACHILI_DIRNAME .. "Skins/"
 
 SkinHandler.skinFolder = skinFolder
 
@@ -15,7 +15,7 @@ SkinHandler.skinFolder = skinFolder
 
 local SkinUtilsEnv = {}
 setmetatable(SkinUtilsEnv,{__index = getfenv()})
-VFS.Include(CHILI_DIRNAME .. "Headers/skinutils.lua", SkinUtilsEnv)
+VFS.Include(NOTACHILI_DIRNAME .. "Headers/skinutils.lua", SkinUtilsEnv)
 
 --//=============================================================================
 --// translates the skin's FileNames to the correct FilePaths

@@ -38,7 +38,8 @@ local includes = {
 
 local NotAchili = widget
 
-NotAchili.CHILI_DIRNAME = LUAUI_DIRNAME.."Widgets/notAchili/data/"
+NOTACHILI_DIRNAME = "modules/notAchili/data/"
+NotAchili.CHILI_DIRNAME = NOTACHILI_DIRNAME
 
 if (-1>0) then
   NotAchili = {}
