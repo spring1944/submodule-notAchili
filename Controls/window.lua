@@ -57,11 +57,11 @@ function Window:TweakDraw()
   local h = self.height
 
   if (self.resizable or self.tweakResizable) then
-    TextureHandler.LoadTexture(0, NOTACHILI_DIRNAME .. "Skins/default/tweak_overlay_resizable.png",self)
+    TextureHandler.LoadTexture(0, NOTACHILI_TOP .. "default/tweak_overlay_resizable.png",self)
   else
-    TextureHandler.LoadTexture(0, NOTACHILI_DIRNAME .. "Skins/default/tweak_overlay.png",self)
+    TextureHandler.LoadTexture(0, NOTACHILI_TOP .. "default/tweak_overlay.png",self)
   end
-    local texInfo = gl.TextureInfo(NOTACHILI_DIRNAME .. "Skins/default/tweak_overlay.png") or {xsize=1, ysize=1}
+    local texInfo = gl.TextureInfo(NOTACHILI_TOP .. "default/tweak_overlay.png") or {xsize=1, ysize=1}
     local tw,th = texInfo.xsize, texInfo.ysize
 
     gl.BeginEnd(GL.TRIANGLE_STRIP, _DrawTiledTexture, x,y,w,h, 31,31,31,31, tw,th, 0)

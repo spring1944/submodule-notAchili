@@ -38,8 +38,10 @@ local includes = {
 
 local NotAchili = widget
 
-NOTACHILI_DIRNAME = "modules/notAchili/data/"
+NOTACHILI_TOP = "modules/notAchili/"
+NOTACHILI_DIRNAME = NOTACHILI_TOP .. "data/"
 NotAchili.CHILI_DIRNAME = NOTACHILI_DIRNAME
+NotAchili.CHILI_TOP = NOTACHILI_TOP
 
 if (-1>0) then
   NotAchili = {}

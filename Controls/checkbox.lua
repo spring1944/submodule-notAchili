@@ -13,7 +13,9 @@ Checkbox = Control:Inherit{
   defaultWidth     = 70,
   defaultHeight    = 18,
 
-  OnChange = {}
+  OnChange = {},
+  
+  inputAllowed = false,
 }
 
 local this = Checkbox
@@ -22,9 +24,9 @@ local inherited = this.inherited
 --//=============================================================================
 
 function Checkbox:Toggle()
-  self:CallListeners(self.OnChange,not self.checked)
-  self.checked = not self.checked
-  self:Invalidate()
+	self:CallListeners(self.OnChange, not self.checked)
+	self.checked = not self.checked
+	self:Invalidate()
 end
 
 --//=============================================================================
@@ -40,7 +42,9 @@ function Checkbox:HitTest()
 end
 
 function Checkbox:MouseDown()
-  self:Toggle()
+  if (self.inputAllowed) then
+    self:Toggle()
+  end
   return self
 end
 

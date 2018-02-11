@@ -6,7 +6,7 @@ SkinHandler = {}
 --//=============================================================================
 --// Some important folders
 
-local skinFolder = NOTACHILI_DIRNAME .. "Skins/"
+local skinFolder = NOTACHILI_TOP
 
 SkinHandler.skinFolder = skinFolder
 
