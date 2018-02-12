@@ -15,7 +15,7 @@ Checkbox = Control:Inherit{
 
   OnChange = {},
   
-  inputAllowed = false,
+  inputAllowed = true,
 }
 
 local this = Checkbox
